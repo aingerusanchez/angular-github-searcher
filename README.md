@@ -1,5 +1,26 @@
 # Github Searcher
 
+Aplicación web centrada en la búsqueda de usuarios de GitHub.
+Desarrollada con Angular Framework.
+
+## Índice  
+1. [Funcionalidades](#funcionalidades)
+2. [Mejoras](#mejoras)
+3. [Instalacion](#instalacion)
+4. [Estructura](#estructura)
+5. [Capturas](#capturas)
+6. [Troubleshooting](#troubleshooting)
+
+## Funcionalidades
+
+* Búsqueda de usuarios de GitHub
+
+### Mejoras
+
+1. TODO: Crear carrousel para mostrar usuarios. (Añadir toogle para cambiar entre la vista de tabla y la de carrousel).
+2. TODO: Añadir pantalla con ruta al perfil del usuario, donde muestre sus datos como por ejemplo, un gráfico de barras con el número de seguidores de cada usuario (ChartJS).
+4. TODO; Unit & Integration testing.
+
 ## Instalación
 
 1. Instalar las dependencias con `npm install`.
@@ -34,13 +55,6 @@ La aplicación se ha creado con la siguiente estructura:
 * **core**: se incluirán bajo este directorio todos los elementos que se utilizarán en toda la aplicación (generalmente como Singleton), como los servicios, interceptors, guards, etc.
 * **features**: se listarán bajo este directorio todas las funcionalidades, generalmente con ruta propia. Cada funcionalidad tendrá su propio directorio con los componentes, servicios, guards, etc. que sean necesarios. (Anteriormente cada una de estas features tendría su propio módulo con lazy-loading)
 * **shared**: se incluirán bajo este directorio todos los elementos reutilizables a través de la aplicación. En el futuro mucha de esta funcionalidad se podrá mover a librerías de Angular.
-
-### Mejoras
-
-1. TODO: Crear carrousel para mostrar usuarios. (Añadir toogle para cambiar entre la vista de tabla y la de carrousel).
-2. TODO: Añadir pantalla con ruta al perfil del usuario, donde muestre sus datos como por ejemplo, un gráfico de barras con el número de seguidores de cada usuario (ChartJS).
-3. Incluir componente para mostrar mensajes de error (toast - banner - dialog) lanzado desde un interceptor global ErrorHandler.
-4. Unit & Integration testing.
 
 ## Capturas
 
