@@ -5,8 +5,9 @@ Desarrollada con Angular Framework.
 
 ## Índice  
 1. [Funcionalidades](#funcionalidades)
-2. [Mejoras](#mejoras)
-3. [Instalacion](#instalacion)
+
+   - [Mejoras](#mejoras)
+3. [Instalación](#instalación)
 4. [Estructura](#estructura)
 5. [Capturas](#capturas)
 6. [Troubleshooting](#troubleshooting)
