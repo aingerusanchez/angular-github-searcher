@@ -46,22 +46,26 @@ La aplicación se ha creado con la siguiente estructura:
 
 ### Mobile
 
-* iPhone 8 sin resultados (pre-búsqueda)
-![iPhone-8 Empty](screenshots/iPhone-8_empty.png){: style="width: 300px; margin: 10px;"}
-* iPhone 8 con resultados
-![iPhone-8 Results](screenshots/iPhone-8_results.png){: style="width: 300px; margin: 10px;"}
-* iPhone 8 sin resultados coincidentes (post-búsqueda)
-![iPhone-8 404](screenshots/iPhone-8_404.png){: style="width: 300px; margin: 10px;"}
+<p align="center"> Sin resultados ni búsqueda | Con resultados | Con búsqueda pero sin resultados encontrados</p>
+<p align="center">
+    <img width='28%' style="margin-right: 1rem;" src="./screenshots/iPhone-8_empty.png" alt="Imagen de iPhone 8 sin resultados ni búsqueda" />
+    <img width='28%' style="margin-right: 1rem;" src="./screenshots/iPhone-8_results.png" alt="Imagen de iPhone 8 con resultados" />
+    <img width='28%' src="./screenshots/iPhone-8_404.png" alt="Imagen de iPhone 8 sin resultados encontrados" />
+</p>
 
 ### Tablet
 
-* Tablet con resultados
-![Tablet Results](screenshots/tablet_results.png){: style="width: 500px; margin: 10px;"}
+<p align="center">Tablet con resultados</p>
+<p align="center">
+  <img width='80%' src="./screenshots/tablet_results.png" alt="Tablet con resultados" />
+</p>
 
 ### Desktop
 
-* Desktop con resultados
-![Desktop Results](screenshots/desktop_results.png){: style="width: 800px; margin: 10px;"}
+<p align="center">Desktop con resultados</p>
+<p align="center">
+  <img width='80%' src="./screenshots/desktop_results.png" alt="Desktop con resultados" />
+</p>
 
 ## Troubleshooting
 
