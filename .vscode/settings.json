@@ -1,0 +1,12 @@
+{
+  "angular-schematics.schematicsDefaultOptions": {
+    "angular-*": {
+      "style": "scss",
+      "externalTemplate": true
+    },
+    "angular-component": {
+      // Set ChangeDetectionStrategy.OnPush by default
+      "skipChangeDetectionOnPush": true
+    }
+  }
+}

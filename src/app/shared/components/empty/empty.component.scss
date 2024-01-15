@@ -1,0 +1,15 @@
+@import "colors";
+@import "variables";
+
+section.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $surface;
+  border-radius: 20px;
+
+  p {
+    margin-bottom: $space-xl;
+    text-align: center;
+  }
+}

@@ -1,0 +1,28 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+@include mat.core();
+
+// Typography
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+$mat-typography: mat.define-typography-config(
+  $font-family: "Open Sans"
+);
+
+// Available color palettes: https://material.io/design/color/
+$primary: mat.define-palette(mat.$indigo-palette);
+$accent: mat.define-palette(mat.$green-palette);
+$warn: mat.define-palette(mat.$red-palette);
+
+$theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+      warn: $warn
+    ),
+    typography: $mat-typography
+  )
+);
+
+@include mat.all-component-themes($theme);

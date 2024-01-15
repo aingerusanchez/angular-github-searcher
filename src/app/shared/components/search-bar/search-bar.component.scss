@@ -1,0 +1,47 @@
+@import "variables";
+@import "colors";
+
+:host {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  width: 100%;
+  gap: $space-lg;
+
+  mat-form-field {
+    flex-grow: 1;
+    min-width: 200px;
+
+    mat-hint {
+      margin-top: $space-sm;
+
+      &::before {
+        content: "🔳";
+        padding-right: $space-xs;
+      }
+
+      &.success {
+        color: $success;
+        &::before {
+          content: "✅";
+        }
+      }
+    }
+
+    mat-error,
+    mat-hint.invalid {
+      color: $error;
+      &::before {
+        content: "❌";
+      }
+    }
+  }
+
+  .button-container {
+    min-width: fit-content;
+  }
+}

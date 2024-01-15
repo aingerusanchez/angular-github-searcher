@@ -1,27 +1,72 @@
-# OdiloFrontendTest
+# Github Searcher
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.2.
+## Instalación
 
-## Development server
+1. Instalar las dependencias con `npm install`.
+2. (Opcional) Crear un archivo `.env` siguiendo el de ejemplo [.env.example](/.env.example) y rellenar las variables.
+3. Lanzar con `ng serve --open`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Estructura
 
-## Code scaffolding
+La aplicación se ha creado con la siguiente estructura:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+├───app
+│   ├───core
+│   │   ├───interceptors
+│   │   ├───services
+│   │   ├───guards
+│   │   ├───types
+│   │   └───utils
+│   ├───features
+│   │   ├───home
+│   │   │   ├───components
+│   │   │   ├───services
+│   │   │   ├───types
+│   ├───shared
+│   │   ├───components
+│   │   ├───directives
+│   │   ├───pipes
+│   │   └───types
+└───assets
+```
 
-## Build
+* **core**: se incluirán bajo este directorio todos los elementos que se utilizarán en toda la aplicación (generalmente como Singleton), como los servicios, interceptors, guards, etc.
+* **features**: se listarán bajo este directorio todas las funcionalidades, generalmente con ruta propia. Cada funcionalidad tendrá su propio directorio con los componentes, servicios, guards, etc. que sean necesarios. (Anteriormente cada una de estas features tendría su propio módulo con lazy-loading)
+* **shared**: se incluirán bajo este directorio todos los elementos reutilizables a través de la aplicación. En el futuro mucha de esta funcionalidad se podrá mover a librerías de Angular.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Mejoras
 
-## Running unit tests
+1. TODO: Crear carrousel para mostrar usuarios. (Añadir toogle para cambiar entre la vista de tabla y la de carrousel).
+2. TODO: Añadir pantalla con ruta al perfil del usuario, donde muestre sus datos como por ejemplo, un gráfico de barras con el número de seguidores de cada usuario (ChartJS).
+3. Incluir componente para mostrar mensajes de error (toast - banner - dialog) lanzado desde un interceptor global ErrorHandler.
+4. Unit & Integration testing.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Capturas
 
-## Running end-to-end tests
+### Mobile
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+* iPhone 8 sin resultados (pre-búsqueda)
+![iPhone-8 Empty](screenshots/iPhone-8_empty.png){: style="width: 300px; margin: 10px;"}
+* iPhone 8 con resultados
+![iPhone-8 Results](screenshots/iPhone-8_results.png){: style="width: 300px; margin: 10px;"}
+* iPhone 8 sin resultados coincidentes (post-búsqueda)
+![iPhone-8 404](screenshots/iPhone-8_404.png){: style="width: 300px; margin: 10px;"}
 
-## Further help
+### Tablet
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* Tablet con resultados
+![Tablet Results](screenshots/tablet_results.png){: style="width: 500px; margin: 10px;"}
+
+### Desktop
+
+* Desktop con resultados
+![Desktop Results](screenshots/desktop_results.png){: style="width: 800px; margin: 10px;"}
+
+## Troubleshooting
+
+> [!CAUTION]
+> La API de Github solo permite los primeros 1.000 resultados, por lo tanto si páginas más allá de la página 100, a 10 resultados por cada página (10 * 100 = 1.000 resultados) llegas al límite y la API devuelve un error.
+
+> [!NOTE]
+> La API de GitHub es pública y permite hacer peticiones sin autenticación, pero tiene un límite de peticiones temporal por IP, por lo que si se supera el límite, la API devuelve un error.

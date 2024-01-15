@@ -1,0 +1,29 @@
+@import "variables";
+@import "colors";
+
+.loading {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: grid;
+  place-content: center;
+}
+
+table,
+mat-paginator {
+  background-color: transparent;
+}
+
+table {
+  tr[mat-row] {
+    cursor: pointer;
+  }
+
+  .github-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: $space-sm;
+  }
+}

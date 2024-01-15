@@ -1,0 +1,11 @@
+<app-search-bar #searchbar (onSearch)="onTypeGithubUsername($event)" />
+
+@if (query()) {
+<h2>Resultados para la búsqueda: {{ query() }}</h2>
+<app-users-table [items]="githubUsersData()?.items || null" [total]="githubUsersData()?.total_count || 0"
+  [loading]="isLoadingData()" [pagination]="pagination()" (paginationChange)="onPaginationChange($event)"
+  (userSelect)="onUserSelected($event)" />
+} @else {
+<app-empty title="Sin resultados"
+  text="Busca un nombre de usuario de Github. <br /> Por ejemplo, '<strong>angular</strong>'." />
+}

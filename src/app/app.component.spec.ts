@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'odilo-frontend-test' title`, () => {
+  it(`should have the 'angular-github-searcher' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('odilo-frontend-test');
+    expect(app.title).toEqual('angular-github-searcher');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, odilo-frontend-test');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-github-searcher');
   });
 });

@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import "variables";
+@import "colors";
+@import "angular-material";
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: $background;
+  padding: $space-xl;
+  box-sizing: border-box;
+}
+
+// Mobile layout
+@media screen and (max-width: 600px) {
+  body {
+    padding: $space-lg;
+  }
+}
+
+// :root {
+//   color-scheme: light dark;
+// }

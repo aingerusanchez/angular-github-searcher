@@ -1,0 +1,16 @@
+@import "variables";
+
+:host {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  margin-inline: auto;
+}
+
+app-search-bar {
+  margin-bottom: $space-lg;
+}
+
+app-empty {
+  margin: $space-lg 0;
+}
